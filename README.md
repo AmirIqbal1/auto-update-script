@@ -18,6 +18,6 @@ chmod +x update.sh
 - Performs `apt install -f` to fix broken dependencies.
 - Runs `apt autoclean` and `apt autoremove` to clean up unnecessary packages and downloaded files.
 - Cleans bash history.
-- Updates Flatpak packages (uncomment the relevant line to enable this).
+- Updates Flatpak packages (comment the relevant line to disable this).
 
-Great script for Ubuntu servers. It includes auto-reboot features, which you can enable by editing out the comments.
+Great script for debian based distros + servers. It includes auto-reboot features, which you can enable by editing out the comments.
