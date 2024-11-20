@@ -61,5 +61,7 @@ else
   echo "System update completed successfully. No reboot required."
 fi
 
+echo""
 # End of the script
 echo "Script finished."
+echo""
