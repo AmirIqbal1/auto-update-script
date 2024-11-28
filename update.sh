@@ -3,6 +3,20 @@
 # Start of the script
 echo "Starting system update..."
 
+#monitors last login attempts
+echo "Monitoring failed login attempts..."
+touch /var/log/btmp
+chmod 600 /var/log/btmp
+echo ""
+echo ""
+
+#lets excute command to check
+lastb
+
+echo ""
+echo ""
+
+
 # Reconfigure dpkg
 echo "Reconfiguring dpkg..."
 dpkg --configure -a
