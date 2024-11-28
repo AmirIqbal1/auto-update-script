@@ -7,14 +7,10 @@ echo "Starting system update..."
 echo "Monitoring failed login attempts..."
 touch /var/log/btmp
 chmod 600 /var/log/btmp
-echo ""
-echo ""
-
+echo "=================================================="
 #lets excute command to check
 lastb
-
-echo ""
-echo ""
+echo "=================================================="
 
 
 # Reconfigure dpkg
