@@ -1,17 +1,6 @@
 #!/bin/bash
 
-# Start of the script
 echo "Starting system update..."
-
-#monitors last login attempts
-echo "Monitoring failed login attempts..."
-touch /var/log/btmp
-chmod 600 /var/log/btmp
-echo "=================================================="
-#lets excute command to check
-lastb
-echo "=================================================="
-
 
 # Reconfigure dpkg
 echo "Reconfiguring dpkg..."
@@ -37,7 +26,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Uncomment the following lines to stop update of Flatpak packages
+# comment the following lines to stop update of Flatpak packages
  echo "Updating Flatpak packages..."
  flatpak update -y
  if [ $? -ne 0 ]; then
@@ -63,13 +52,24 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Auto reboot if needed
+# Uncomment for Auto reboot if needed
+echo "=================================================="
 if [ -f /var/run/reboot-required ]; then
   echo " - Reboot required. "
 #  reboot
 else
   echo "System update completed successfully. No reboot required."
 fi
+echo "=================================================="
+
+#monitors last login attempts
+echo "Monitoring failed login attempts..."
+touch /var/log/btmp
+chmod 600 /var/log/btmp
+echo "=================================================="
+#lets excute command to check
+lastb
+echo "=================================================="
 
 echo""
 # End of the script
