@@ -48,3 +48,4 @@ Categories=Utility;
 ```bash
 chmod +x /home/$NAME/Desktop/UpdateSystem.desktop
 ```
+PS. Closes the window once all updates etc are done.
