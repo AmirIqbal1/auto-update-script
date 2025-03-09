@@ -22,13 +22,13 @@ chmod +x update.sh
 
 Great script for debian based distros + servers. It includes auto-reboot features, which you can enable by editing out the comments.
 
-## Automation:
-# 1. Create a .desktop File for the Shortcut:
+# Automation:
+## 1. Create a .desktop File for the Shortcut:
 
 ```bash
 nano /home/$NAME/Desktop/UpdateSystem.desktop
 ```
-# 2. Add the following content:
+## 2. Add the following content:
 
 ```bash
 [Desktop Entry]
@@ -43,7 +43,7 @@ Categories=Utility;
 - pkexec prompts for an admin password.
 - Terminal=true keeps the terminal open to view progress.
 
-# 3. Make the Shortcut Executable
+## 3. Make the Shortcut Executable
 
 ```bash
 chmod +x /home/$NAME/Desktop/UpdateSystem.desktop
