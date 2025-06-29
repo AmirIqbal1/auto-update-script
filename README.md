@@ -17,10 +17,9 @@ chmod +x update.sh
 - Updates and upgrades the system.
 - Performs `apt install -f` to fix broken dependencies.
 - Runs `apt autoclean` and `apt autoremove` to clean up unnecessary packages and downloaded files.
-- Cleans bash history.
 - Updates Flatpak packages (comment the relevant line to disable this).
 
-Great script for debian based distros + servers. It includes auto-reboot features, which you can enable by editing out the comments.
+This is a great script for Debian-based distros and servers. It includes auto-reboot features, which you can enable by editing out the comments.
 
 # Automation:
 ## 1. Create a .desktop File for the Shortcut:
@@ -33,12 +32,12 @@ nano /home/$NAME/Desktop/UpdateSystem.desktop
 ```bash
 [Desktop Entry]
 Name=Update System
-Comment=Update and Upgrade System
-Exec=sh -c 'pkexec bash ~/update.sh'
+Comment=Update and upgrade the system with root privileges
+Exec=pkexec bash /home/$USER/update.sh
 Icon=system-software-update
 Terminal=true
 Type=Application
-Categories=Utility;
+Categories=Utility;System;
 ```
 - pkexec prompts for an admin password.
 - Terminal=true keeps the terminal open to view progress.
@@ -48,4 +47,4 @@ Categories=Utility;
 ```bash
 chmod +x /home/$NAME/Desktop/UpdateSystem.desktop
 ```
-PS. Closes the window once all updates etc are done.
+PS. Closes the window once all updates/upgrades are done.
